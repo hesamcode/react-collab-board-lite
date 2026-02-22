@@ -1,16 +1,73 @@
-# React + Vite
+# Collab Board Lite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interaction-heavy, static React board app (Miro-lite) built with Vite + React + Tailwind v4.
 
-Currently, two official plugins are available:
+## What it includes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Pan and zoom canvas (drag background, wheel zoom, zoom controls)
+- Object creation: sticky notes, rectangles, and arrows
+- Object interactions: drag, sticky-note resize, and multi-select
+- Properties editing: color, text, width/height, arrow stroke width
+- Selection actions: duplicate and delete
+- Undo/redo history (20+ steps) with keyboard shortcuts
+- localStorage persistence with schema versioning and demo-board seed on first run
+- Responsive UI:
+  - Mobile: bottom toolbar + slide-up properties sheet + selection list
+  - Desktop: full toolbar + right-side properties panel
+- Accessibility basics: focus rings, aria labels, and keyboard actions
+- Dark mode using `html.dark` with persisted preference
+- Toast notifications and first-run empty hint overlay
 
-## React Compiler
+## Keyboard shortcuts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `Ctrl/Cmd + Z`: Undo
+- `Ctrl/Cmd + Shift + Z`: Redo
+- `N`: Add sticky note
+- `Delete` / `Backspace`: Delete selection
 
-## Expanding the ESLint configuration
+## Local development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+```
+
+Build output is static and suitable for GitHub Pages deployment. The Vite base path is configured for this repository.
+
+## Project structure
+
+```text
+src/
+  app/
+    AppShell.jsx
+  components/
+    ui/
+      Button.jsx
+      Modal.jsx
+      Sheet.jsx
+      Toast.jsx
+      Tooltip.jsx
+  features/
+    board/
+      BoardPage.jsx
+      Canvas.jsx
+      Toolbar.jsx
+      PropertiesPanel.jsx
+      objects.js
+      reducer.js
+  lib/
+    geometry.js
+    ids.js
+    storage.js
+  index.css
+  main.jsx
+```
+
+Built by Hesam Khorshidi
+https://hesamkhorshidi.github.io
