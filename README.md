@@ -69,5 +69,5 @@ src/
   main.jsx
 ```
 
-Built by Hesam Khorshidi
-https://hesamkhorshidi.github.io
+Built by HesamCode
+https://hesamcode.github.io

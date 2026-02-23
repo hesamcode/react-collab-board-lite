@@ -61,13 +61,13 @@ export default function AppShell() {
       <footer className="mx-auto mt-10 w-full max-w-[1400px] px-4 pb-8 text-base leading-relaxed text-slate-700 dark:text-slate-200">
         Built by{" "}
         <a
-          href="https://hesamkhorshidi.github.io"
+          href="https://hesamcode.github.io"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Hesam Khorshidi portfolio website"
+          aria-label="Visit HesamCode portfolio website"
           className="font-semibold text-primary-500 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
         >
-          Hesam Khorshidi
+          HesamCode
         </a>
       </footer>
 
@@ -75,13 +75,13 @@ export default function AppShell() {
         <p>
           Built by{" "}
           <a
-            href="https://hesamkhorshidi.github.io"
+            href="https://hesamcode.github.io"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit Hesam Khorshidi portfolio website"
+            aria-label="Visit HesamCode portfolio website"
             className="font-semibold text-primary-500 underline underline-offset-4"
           >
-            Hesam Khorshidi
+            HesamCode
           </a>
         </p>
       </Modal>
